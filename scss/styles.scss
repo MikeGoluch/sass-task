@@ -1,0 +1,90 @@
+//VARIABLES
+$btn-background-colors: (
+    'btn-green': #69d165,
+    'btn-blue': dodgerblue,
+    'btn-yellow': #ebd13e,
+);
+//MIXINS
+@mixin hover-effect($btn-background-val, $btn-color-val, $btn-border-color-val) {
+    background-color: $btn-background-val;
+    border: 1px solid $btn-border-color-val;
+    color: $btn-color-val;
+}
+
+//STYLES
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background-color: white;
+    width: 1440px;
+    .sass-task {
+        text-align: center;
+        width: 100%;
+        h1 {
+            font-size: 63px;
+            margin: 31px 0 27px -12px;
+        }
+        .btn {
+            display: inline-block;
+            width: 270px;
+            color: white;
+            font-size: 32px;
+            border-radius: 18px;
+            border: none;
+            height: 45px;
+            margin: 16px 35px 16px -6px;
+            &-green {
+                @extend .btn;
+                background-color: map-get($btn-background-colors, 'btn-green');
+                &:hover {
+                    @include hover-effect(pink, black, orange);
+                }
+            }
+            &-blue {
+                @extend .btn;
+                background-color: map-get($btn-background-colors, 'btn-blue');
+                &:hover {
+                    @include hover-effect(orange, darkblue, brown);
+                }
+            }
+            &-yellow {
+                @extend .btn;
+                background-color: map-get($btn-background-colors, 'btn-yellow');
+                &:hover {
+                    @include hover-effect(violet, green, black);
+                }
+            }
+        }
+        .is-disabled {
+            background-color: grey;
+            pointer-events: none;
+        }
+        .is-active {
+            &:hover {
+                @include hover-effect(blue, red, #000000);
+            }
+        }
+        // .btn-green {
+        //     background-color: map-get($btn-background-colors, 'btn-green');
+        //     &:hover {
+        //         @include hover-effect(pink, black, orange);
+        //     }
+        // }
+        // .btn-blue {
+        //     background-color: map-get($btn-background-colors, 'btn-blue');
+        //     &:hover {
+        //         @include hover-effect(orange, darkblue, brown);
+        //     }
+        // }
+        // .btn-yellow {
+        //     background-color: map-get($btn-background-colors, 'btn-yellow');
+        //     &:hover {
+        //         @include hover-effect(violet, green, black);
+        //     }
+        // }
+    }
+}

@@ -1,0 +1,72 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background-color: white;
+  width: 1440px;
+}
+
+body .sass-task {
+  text-align: center;
+  width: 100%;
+}
+
+body .sass-task h1 {
+  font-size: 63px;
+  margin: 31px 0 27px -12px;
+}
+
+body .sass-task .btn, body .sass-task .btn-green, body .sass-task .btn-blue, body .sass-task .btn-yellow {
+  display: inline-block;
+  width: 270px;
+  color: white;
+  font-size: 32px;
+  border-radius: 18px;
+  border: none;
+  height: 45px;
+  margin: 16px 35px 16px -6px;
+}
+
+body .sass-task .btn-green {
+  background-color: #69d165;
+}
+
+body .sass-task .btn-green:hover {
+  background-color: pink;
+  border: 1px solid orange;
+  color: black;
+}
+
+body .sass-task .btn-blue {
+  background-color: dodgerblue;
+}
+
+body .sass-task .btn-blue:hover {
+  background-color: orange;
+  border: 1px solid brown;
+  color: darkblue;
+}
+
+body .sass-task .btn-yellow {
+  background-color: #ebd13e;
+}
+
+body .sass-task .btn-yellow:hover {
+  background-color: violet;
+  border: 1px solid black;
+  color: green;
+}
+
+body .sass-task .is-disabled {
+  background-color: grey;
+  pointer-events: none;
+}
+
+body .sass-task .is-active:hover {
+  background-color: blue;
+  border: 1px solid #000000;
+  color: red;
+}
